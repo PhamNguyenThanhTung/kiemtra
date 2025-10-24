@@ -1,0 +1,42 @@
+﻿@model pntt_231220952.Models.PnttComputer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>PnttComputer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PnttComName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PnttComName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PnttComPrice)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PnttComPrice)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PnttComImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PnttComImage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PnttComStatus)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PnttComStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PnttComId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

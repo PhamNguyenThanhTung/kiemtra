@@ -1,0 +1,48 @@
+﻿@model pntt_231220952.Models.PnttComputer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>PnttComputer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PnttComName" class="control-label"></label>
+                <input asp-for="PnttComName" class="form-control" />
+                <span asp-validation-for="PnttComName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PnttComPrice" class="control-label"></label>
+                <input asp-for="PnttComPrice" class="form-control" />
+                <span asp-validation-for="PnttComPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PnttComImage" class="control-label"></label>
+                <input asp-for="PnttComImage" class="form-control" />
+                <span asp-validation-for="PnttComImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PnttComStatus" class="control-label"></label>
+                <input asp-for="PnttComStatus" class="form-control" />
+                <span asp-validation-for="PnttComStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
